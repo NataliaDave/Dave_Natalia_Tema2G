@@ -30,6 +30,19 @@ public class Revendedora {
         this.saldo = saldo;
     }
     
+     public String getNombre() {
+        return nombre;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+    
+    
     //Métodos
     
     public boolean tieneSaldo() {
@@ -45,8 +58,8 @@ public class Revendedora {
     }
 
     public double convertirMoneda(String cotizacion) {
-
-        return this.saldo / (Integer.parseInt(cotizacion));
+        System.out.println("La cotización del día es " + cotizacion);
+       return this.saldo / Double.parseDouble(cotizacion);
 
     }
     
@@ -93,16 +106,4 @@ public class Revendedora {
         return pedidos;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public List<Pedido> getPedidos() {
-        return pedidos;
-    }
-    
 }

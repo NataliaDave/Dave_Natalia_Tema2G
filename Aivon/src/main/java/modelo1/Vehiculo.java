@@ -36,7 +36,7 @@ public class Vehiculo {
         System.out.println("Siguiendo vehiculo " + patente + "por GPS");
     }
 
-    public String gePatente() {
+    public String getPatente() {
         return patente;
     }
 

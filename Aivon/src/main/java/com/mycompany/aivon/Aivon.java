@@ -12,7 +12,7 @@ import modelo1.*;
  */
 public class Aivon {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
  
         Producto esmalteRojo = new Producto("P001", "Esmalte Rojo", "Unas", 15, 800, 500);
         Producto crema = new Producto("P002", "Crema Hidratante", "Piel", 200, 1500, 900);

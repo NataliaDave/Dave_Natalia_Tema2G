@@ -28,7 +28,12 @@ public class Pedido {
     private Vehiculo vehiculo;
     private List<CajaPedido> cajas = new ArrayList<>();
 
-    public Pedido(int nro, LocalDate fechaIngreso, String domicilio, String qr, Revendedora revendedora, Campania campania) {
+    public Pedido(int nro, LocalDate fechaIngreso, String domicilio, String qr, Revendedora revendedora, Campania campania) throws Exception{
+        if (revendedora.hayPedido(campania)){
+            throw new Exception ("La revendedora " + revendedora.getNombre() 
+                    + " ya tiene un pedido registrado en la campaña " + campania.getNro() + ".");
+        }
+        
         this.nro = nro;
         this.fechaIngreso = fechaIngreso;
         this.domicilio = domicilio;
