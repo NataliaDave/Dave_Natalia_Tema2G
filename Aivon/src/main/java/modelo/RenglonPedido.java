@@ -6,7 +6,7 @@ package modelo;
 
 /**
  *
- * @author Usuario
+ * @author Dave Natalia
  */
 public class RenglonPedido {
        private Producto producto;
@@ -19,12 +19,20 @@ public class RenglonPedido {
         this.subtotal = producto.getPrecioVenta() * cantidad;
     }
 
-    public double calcularSubtotal() { return subtotal; }
-    public Producto getProducto() { return producto; }
-    public int getCantidad() { return cantidad; }
+    public double calcularSubtotal() { 
+        return subtotal; 
+    }
+    public Producto getProducto() {
+        return producto;
+    }
+    public int getCantidad() {
+        return cantidad;
+    }
 
     @Override
-    public String toString() { return producto.getNombre() + " x" + cantidad + " = $" + subtotal; }
+    public String toString() {
+        return producto.getNombre() + " x" + cantidad + " = $" + subtotal;
+    }
 }
     
 
